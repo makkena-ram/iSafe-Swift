@@ -1,25 +1,105 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="okI-qX-NH1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="iSafe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfn-UK-MJK">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Add Gaurdians">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addGaurdians:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0a-JT-Fjr"/>
+                                    <segue destination="SF3-a4-BcG" kind="show" identifier="AddGaurdians" id="8hz-jf-Oby"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVg-MW-8rK">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="First Aid">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="firstAid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3D-RO-ll3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WB-wI-UC7">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Video Recording">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="videoRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KPx-Jj-Jz5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pVo-jO-CSD">
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="SOS">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sOS:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdH-zg-qtZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.64313725489999995" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pfn-UK-MJK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIa-6p-lGM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="1WB-wI-UC7" secondAttribute="bottom" id="Jjh-so-0cE"/>
+                            <constraint firstItem="1WB-wI-UC7" firstAttribute="top" secondItem="BVg-MW-8rK" secondAttribute="bottom" constant="30" id="Mvf-a6-020"/>
+                            <constraint firstItem="pVo-jO-CSD" firstAttribute="centerX" secondItem="pfn-UK-MJK" secondAttribute="centerX" id="Tpg-Pq-JAV"/>
+                            <constraint firstItem="1WB-wI-UC7" firstAttribute="centerX" secondItem="pfn-UK-MJK" secondAttribute="centerX" id="Wnx-LJ-wOq"/>
+                            <constraint firstItem="BVg-MW-8rK" firstAttribute="centerX" secondItem="pfn-UK-MJK" secondAttribute="centerX" id="Xkl-Ih-G3k"/>
+                            <constraint firstItem="BVg-MW-8rK" firstAttribute="top" secondItem="pVo-jO-CSD" secondAttribute="bottom" constant="30" id="ay1-kS-zYN"/>
+                            <constraint firstItem="pfn-UK-MJK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="h1P-qk-pqx"/>
+                            <constraint firstItem="pVo-jO-CSD" firstAttribute="top" secondItem="pfn-UK-MJK" secondAttribute="bottom" constant="30" id="oWO-Bt-SeQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="QSt-4n-HT8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1543" y="328"/>
+        </scene>
+        <!--AddGaurdians-->
+        <scene sceneID="l5i-Ib-AAg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddGaurdians" id="SF3-a4-BcG" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rWg-Z1-5xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1969.5" y="316"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ddT-Tn-fd3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="okI-qX-NH1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ib6-Qm-mYN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Pd4-cl-sMr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CjF-38-SP6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872" y="323"/>
         </scene>
     </scenes>
 </document>
