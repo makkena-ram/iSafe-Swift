@@ -11,15 +11,26 @@ import UIKit
 class NewContact: NSObject {
     
     static var contacts : [NewContact] = []
-    var data: [String : String?] = [:]
+    var id: String?
+    var firstName: String?
+    var lastName: String?
+    var phoneNumber: String?
     
-    init(data : [String : String?]) {
-        self.data = data
+    init(id:String, data : [String : AnyObject]) {
         super.init()
+        self.id = id
+        firstName = data["firstName"] as? String
+        lastName = data["lastName"] as? String
+        phoneNumber = data["phoneNumber"] as? String
     }
     
-    static func getContacts() -> [NewContact] {
-        return self.contacts
+    func toAnyObject() -> Any{
+        return [
+            "firstName": firstName,
+            "lastName": lastName,
+            "phoneNumber": phoneNumber
+        ]
+
     }
 }
 

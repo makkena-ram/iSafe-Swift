@@ -10,18 +10,30 @@ import UIKit
 
 
 
-class AddNewContactViewController: UIViewController, AddGaurdiansViewControllerDelegate {
-
-    @IBOutlet weak var emailIDTextField: UITextField!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var nameTextField: UITextField!
+class AddNewContactViewController: UIViewController {
+    
+    @IBOutlet weak var firstNameTF: TextFieldValidation!
+    @IBOutlet weak var lastNameTF: TextFieldValidation!
+    @IBOutlet weak var phoneNumberTF: TextFieldValidation!
+    
     var newContact : NewContact?
+    
+    @IBOutlet weak var saveBtnClicked: PrimaryButton!
+    @IBOutlet weak var cancelBtnClicked: SecondaryButton!
     
     var addGaurdiansVC : AddGaurdiansViewController? = AddGaurdiansViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addGaurdiansVC?.delegate = self
+        //saveBtnClicked.primaryBtnDisabled()
+        saveBtnClicked.addTarget(self, action: #selector(saveBtnTapped), forControlEvents: .TouchUpInside)
+        cancelBtnClicked.addTarget(self, action: #selector(cancelBtnTapped), forControlEvents: .TouchUpInside)
+        firstNameTF.textFieldType = .Name
+        lastNameTF.textFieldType = .Name
+        phoneNumberTF.textFieldType = .PhoneNumber
+        firstNameTF.delegate = self
+        lastNameTF.delegate = self
+        phoneNumberTF.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -40,47 +52,40 @@ class AddNewContactViewController: UIViewController, AddGaurdiansViewControllerD
         // Pass the selected object to the new view controller.
     }
     */
-
-    @IBAction func saveBtnClicked(sender: UIButton) {
-        var newContactDict : [String : String?] = [:]
-        //Getting the Managed Object Context
-        let delegate = UIApplication.sharedApplication().delegate as? AppDelegate
-        let managedObjectContext = delegate?.managedObjectContext
-        var contact : Contact? = nil
-        if #available(iOS 10.0, *) {
-             contact = Contact(context: managedObjectContext!)
-        } else {
-            // Fallback on earlier versions
-        }
-        
-        contact?.name = nameTextField.text
-        contact?.phoneNumber = phoneNumberTextField.text
-        contact?.email = emailIDTextField.text
-        delegate?.saveContext()
-        
-        
-        newContactDict["name"] = nameTextField.text
-        newContactDict["phoneNumber"] = phoneNumberTextField.text
-        newContactDict["emailID"] = emailIDTextField.text
-        newContact = NewContact(data: newContactDict)
+    
+    func cancelBtnTapped(){
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+   
+    func saveBtnTapped() {
+        var newContactDict : [String : AnyObject] = [:]
+            
+        let id:String = NSUUID().UUIDString
+        newContactDict["firstName"] = firstNameTF.text
+        newContactDict["lastName"] = lastNameTF.text
+        newContactDict["phoneNumber"] = phoneNumberTF.text
+        newContact = NewContact(id: id, data: newContactDict)
+        firebaseManager.addUsersData(newContact!)
         guard let newContact = self.newContact else {
             return
         }
         NewContact.contacts.append(newContact)
         self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+}
+
+extension AddNewContactViewController: UITextFieldDelegate{
+    func textFieldDidEndEditing(textField: UITextField) {
+        let validatingField: TextFieldValidation =  (textField as? TextFieldValidation)!
+        if validatingField.textFieldType == .PhoneNumber && validatingField.isPhoneNumberValid(){
+            textField.text = validatingField.formatPhoneNumber()
+        }
+        
     }
     
-    @IBAction func cancelBtnClicked(sender: AnyObject) {
-       self.dismissViewControllerAnimated(true, completion: nil)
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
-    
-    func getContact() -> NewContact {
-        var newContactDict : [String : String?] = [:]
-        newContactDict["name"] = nameTextField.text
-        newContactDict["phoneNumber"] = phoneNumberTextField.text
-        newContactDict["emailID"] = emailIDTextField.text
-        newContact = NewContact(data: newContactDict)
-        return newContact!
-    }
-    
 }
