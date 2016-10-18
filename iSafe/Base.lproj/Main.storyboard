@@ -35,6 +35,7 @@
                                 </state>
                                 <connections>
                                     <action selector="firstAid:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3D-RO-ll3"/>
+                                    <segue destination="Bgu-IA-MSj" kind="show" id="llQ-5X-cUJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WB-wI-UC7">
@@ -75,13 +76,21 @@
             </objects>
             <point key="canvasLocation" x="1543" y="328"/>
         </scene>
+        <!--FirstAID-->
+        <scene sceneID="CYV-HM-m0s">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FirstAID" id="Bgu-IA-MSj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s7q-Pz-3eP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2196" y="213"/>
+        </scene>
         <!--AddGaurdians-->
         <scene sceneID="l5i-Ib-AAg">
             <objects>
                 <viewControllerPlaceholder storyboardName="AddGaurdians" id="SF3-a4-BcG" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rWg-Z1-5xq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1969.5" y="316"/>
+            <point key="canvasLocation" x="2208" y="322"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ddT-Tn-fd3">

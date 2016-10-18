@@ -22,16 +22,16 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func addGaurdians(_ sender: UIButton) {
+    @IBAction func addGaurdians(sender: UIButton) {
     }
 
-    @IBAction func sOS(_ sender: UIButton) {
+    @IBAction func sOS(sender: UIButton) {
     }
     
-    @IBAction func firstAid(_ sender: UIButton) {
+    @IBAction func firstAid(sender: UIButton) {
     }
     
-    @IBAction func videoRecording(_ sender: UIButton) {
+    @IBAction func videoRecording(sender: UIButton) {
     }
 }
 

@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		970973121DAD6FF000797F13 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970973111DAD6FF000797F13 /* ContactsUI.framework */; };
 		970973141DAD701400797F13 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970973131DAD701400797F13 /* Contacts.framework */; };
+		970973171DADE1BB00797F13 /* FirstAID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970973161DADE1BB00797F13 /* FirstAID.storyboard */; };
+		9709731D1DADE57900797F13 /* SingleLableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709731B1DADE57900797F13 /* SingleLableTableViewCell.swift */; };
+		9709731E1DADE57900797F13 /* SingleLableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9709731C1DADE57900797F13 /* SingleLableTableViewCell.xib */; };
+		970973211DADE6AF00797F13 /* ContactInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709731F1DADE6AF00797F13 /* ContactInfoTableViewCell.swift */; };
+		970973221DADE6AF00797F13 /* ContactInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 970973201DADE6AF00797F13 /* ContactInfoTableViewCell.xib */; };
+		970973241DADE92C00797F13 /* RegisterCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970973231DADE92C00797F13 /* RegisterCells.swift */; };
+		970973261DAE77F400797F13 /* FirstAIDTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970973251DAE77F400797F13 /* FirstAIDTableViewController.swift */; };
+		970973281DAE7E4100797F13 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 970973271DAE7E4100797F13 /* GoogleService-Info.plist */; };
+		9709732B1DAE8C1D00797F13 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709732A1DAE8C1D00797F13 /* FirebaseManager.swift */; };
+		9709732D1DB05BA400797F13 /* FirstAID.json in Resources */ = {isa = PBXBuildFile; fileRef = 9709732C1DB05BA400797F13 /* FirstAID.json */; };
+		9709732F1DB05BCB00797F13 /* FirstAIDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9709732E1DB05BCB00797F13 /* FirstAIDManager.swift */; };
+		970973311DB0712400797F13 /* FirstAIDQuestionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970973301DB0712400797F13 /* FirstAIDQuestionsTableViewController.swift */; };
+		970973331DB07CE800797F13 /* FirstAIDAnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970973321DB07CE800797F13 /* FirstAIDAnswerViewController.swift */; };
 		971329041D8DAF2E00A287E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971329031D8DAF2E00A287E1 /* AppDelegate.swift */; };
 		971329061D8DAF2E00A287E1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971329051D8DAF2E00A287E1 /* MainViewController.swift */; };
 		971329091D8DAF2E00A287E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 971329071D8DAF2E00A287E1 /* Main.storyboard */; };
@@ -22,8 +35,13 @@
 		9713293B1D8DB85A00A287E1 /* AddNewContact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9713293A1D8DB85A00A287E1 /* AddNewContact.storyboard */; };
 		9713293D1D8DB87900A287E1 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713293C1D8DB87900A287E1 /* AddNewContactViewController.swift */; };
 		9713293F1D8DBC8F00A287E1 /* NewContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9713293E1D8DBC8F00A287E1 /* NewContact.swift */; };
+		975632671DB6A99A00309A85 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975632661DB6A99A00309A85 /* Constants.swift */; };
+		977732301DB4197E00A2D207 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9777322F1DB4197E00A2D207 /* PrimaryButton.swift */; };
+		977732331DB41D1A00A2D207 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977732321DB41D1A00A2D207 /* SecondaryButton.swift */; };
+		977732351DB4214A00A2D207 /* TextFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 977732341DB4214A00A2D207 /* TextFieldValidation.swift */; };
 		97787F271D9C50360048B85E /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97787F251D9C50360048B85E /* Contact+CoreDataClass.swift */; };
 		97787F281D9C50360048B85E /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97787F261D9C50360048B85E /* Contact+CoreDataProperties.swift */; };
+		E6D5EBE7E3E250A466736B53 /* Pods_iSafe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673D7ED5E99E62EA49868D6D /* Pods_iSafe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +62,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25F67BE386970FC455C9EF06 /* Pods-iSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSafe/Pods-iSafe.release.xcconfig"; sourceTree = "<group>"; };
+		322BC2640196107B0A8D6D4B /* Pods-iSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSafe/Pods-iSafe.debug.xcconfig"; sourceTree = "<group>"; };
+		673D7ED5E99E62EA49868D6D /* Pods_iSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9709730D1DAD6B3400797F13 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		9709730E1DAD6B3400797F13 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		970973111DAD6FF000797F13 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		970973131DAD701400797F13 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		970973161DADE1BB00797F13 /* FirstAID.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FirstAID.storyboard; sourceTree = "<group>"; };
+		9709731B1DADE57900797F13 /* SingleLableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleLableTableViewCell.swift; sourceTree = "<group>"; };
+		9709731C1DADE57900797F13 /* SingleLableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SingleLableTableViewCell.xib; sourceTree = "<group>"; };
+		9709731F1DADE6AF00797F13 /* ContactInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactInfoTableViewCell.swift; sourceTree = "<group>"; };
+		970973201DADE6AF00797F13 /* ContactInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactInfoTableViewCell.xib; sourceTree = "<group>"; };
+		970973231DADE92C00797F13 /* RegisterCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCells.swift; sourceTree = "<group>"; };
+		970973251DAE77F400797F13 /* FirstAIDTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAIDTableViewController.swift; sourceTree = "<group>"; };
+		970973271DAE7E4100797F13 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9709732A1DAE8C1D00797F13 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		9709732C1DB05BA400797F13 /* FirstAID.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FirstAID.json; sourceTree = "<group>"; };
+		9709732E1DB05BCB00797F13 /* FirstAIDManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAIDManager.swift; sourceTree = "<group>"; };
+		970973301DB0712400797F13 /* FirstAIDQuestionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAIDQuestionsTableViewController.swift; sourceTree = "<group>"; };
+		970973321DB07CE800797F13 /* FirstAIDAnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstAIDAnswerViewController.swift; sourceTree = "<group>"; };
 		971329001D8DAF2E00A287E1 /* iSafe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSafe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		971329031D8DAF2E00A287E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		971329051D8DAF2E00A287E1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +101,11 @@
 		9713293A1D8DB85A00A287E1 /* AddNewContact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddNewContact.storyboard; sourceTree = "<group>"; };
 		9713293C1D8DB87900A287E1 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
 		9713293E1D8DBC8F00A287E1 /* NewContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContact.swift; sourceTree = "<group>"; };
+		972E52251DB2E6240016CF6C /* iSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSafe.entitlements; sourceTree = "<group>"; };
+		975632661DB6A99A00309A85 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9777322F1DB4197E00A2D207 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		977732321DB41D1A00A2D207 /* SecondaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		977732341DB4214A00A2D207 /* TextFieldValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldValidation.swift; sourceTree = "<group>"; };
 		97787F251D9C50360048B85E /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
 		97787F261D9C50360048B85E /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +117,7 @@
 			files = (
 				970973141DAD701400797F13 /* Contacts.framework in Frameworks */,
 				970973121DAD6FF000797F13 /* ContactsUI.framework in Frameworks */,
+				E6D5EBE7E3E250A466736B53 /* Pods_iSafe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93FF81B7575BD4839C44BE9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				322BC2640196107B0A8D6D4B /* Pods-iSafe.debug.xcconfig */,
+				25F67BE386970FC455C9EF06 /* Pods-iSafe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9709730C1DAD6B3400797F13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,18 +154,52 @@
 				970973111DAD6FF000797F13 /* ContactsUI.framework */,
 				9709730D1DAD6B3400797F13 /* AddressBook.framework */,
 				9709730E1DAD6B3400797F13 /* AddressBookUI.framework */,
+				673D7ED5E99E62EA49868D6D /* Pods_iSafe.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		970973151DADE19400797F13 /* FirstAID */ = {
+			isa = PBXGroup;
+			children = (
+				970973161DADE1BB00797F13 /* FirstAID.storyboard */,
+				970973251DAE77F400797F13 /* FirstAIDTableViewController.swift */,
+				970973301DB0712400797F13 /* FirstAIDQuestionsTableViewController.swift */,
+				970973321DB07CE800797F13 /* FirstAIDAnswerViewController.swift */,
+			);
+			name = FirstAID;
+			sourceTree = "<group>";
+		};
+		9709731A1DADE53400797F13 /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9709731B1DADE57900797F13 /* SingleLableTableViewCell.swift */,
+				9709731C1DADE57900797F13 /* SingleLableTableViewCell.xib */,
+				9709731F1DADE6AF00797F13 /* ContactInfoTableViewCell.swift */,
+				970973201DADE6AF00797F13 /* ContactInfoTableViewCell.xib */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		970973291DAE8C1100797F13 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9709732A1DAE8C1D00797F13 /* FirebaseManager.swift */,
+				9709732E1DB05BCB00797F13 /* FirstAIDManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		971328F71D8DAF2E00A287E1 = {
 			isa = PBXGroup;
 			children = (
+				970973271DAE7E4100797F13 /* GoogleService-Info.plist */,
 				971329021D8DAF2E00A287E1 /* iSafe */,
 				9713291A1D8DAF2E00A287E1 /* iSafeTests */,
 				971329251D8DAF2E00A287E1 /* iSafeUITests */,
 				971329011D8DAF2E00A287E1 /* Products */,
 				9709730C1DAD6B3400797F13 /* Frameworks */,
+				93FF81B7575BD4839C44BE9C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,10 +216,18 @@
 		971329021D8DAF2E00A287E1 /* iSafe */ = {
 			isa = PBXGroup;
 			children = (
+				977732311DB41C7300A2D207 /* UI */,
+				972E52251DB2E6240016CF6C /* iSafe.entitlements */,
+				970973291DAE8C1100797F13 /* Managers */,
+				9709731A1DADE53400797F13 /* Table View Cells */,
+				970973151DADE19400797F13 /* FirstAID */,
 				971329341D8DB38300A287E1 /* Add Gaurdians */,
 				971329031D8DAF2E00A287E1 /* AppDelegate.swift */,
 				971329051D8DAF2E00A287E1 /* MainViewController.swift */,
 				971329071D8DAF2E00A287E1 /* Main.storyboard */,
+				970973231DADE92C00797F13 /* RegisterCells.swift */,
+				975632661DB6A99A00309A85 /* Constants.swift */,
+				9709732C1DB05BA400797F13 /* FirstAID.json */,
 				9713290D1D8DAF2E00A287E1 /* Assets.xcassets */,
 				9713290F1D8DAF2E00A287E1 /* LaunchScreen.storyboard */,
 				971329121D8DAF2E00A287E1 /* Info.plist */,
@@ -185,6 +276,16 @@
 			name = "Add New Contact";
 			sourceTree = "<group>";
 		};
+		977732311DB41C7300A2D207 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9777322F1DB4197E00A2D207 /* PrimaryButton.swift */,
+				977732321DB41D1A00A2D207 /* SecondaryButton.swift */,
+				977732341DB4214A00A2D207 /* TextFieldValidation.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -192,9 +293,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9713292B1D8DAF2E00A287E1 /* Build configuration list for PBXNativeTarget "iSafe" */;
 			buildPhases = (
+				0ABD5308D4F3A9C026CB58DE /* [CP] Check Pods Manifest.lock */,
 				971328FC1D8DAF2E00A287E1 /* Sources */,
 				971328FD1D8DAF2E00A287E1 /* Frameworks */,
 				971328FE1D8DAF2E00A287E1 /* Resources */,
+				267D50F2A3075EDB40019CC3 /* [CP] Embed Pods Frameworks */,
+				D8BA31B28070134603A410D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,13 +352,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rama Krishna";
 				TargetAttributes = {
 					971328FF1D8DAF2E00A287E1 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = TC5Z7U4Q5M;
 						LastSwiftMigration = 0800;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					971329161D8DAF2E00A287E1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -293,8 +405,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				970973221DADE6AF00797F13 /* ContactInfoTableViewCell.xib in Resources */,
 				971329111D8DAF2E00A287E1 /* LaunchScreen.storyboard in Resources */,
+				970973281DAE7E4100797F13 /* GoogleService-Info.plist in Resources */,
 				9713293B1D8DB85A00A287E1 /* AddNewContact.storyboard in Resources */,
+				9709731E1DADE57900797F13 /* SingleLableTableViewCell.xib in Resources */,
+				9709732D1DB05BA400797F13 /* FirstAID.json in Resources */,
+				970973171DADE1BB00797F13 /* FirstAID.storyboard in Resources */,
 				971329361D8DB3B200A287E1 /* AddGaurdians.storyboard in Resources */,
 				9713290E1D8DAF2E00A287E1 /* Assets.xcassets in Resources */,
 				971329091D8DAF2E00A287E1 /* Main.storyboard in Resources */,
@@ -317,15 +434,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ABD5308D4F3A9C026CB58DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		267D50F2A3075EDB40019CC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iSafe/Pods-iSafe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8BA31B28070134603A410D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iSafe/Pods-iSafe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		971328FC1D8DAF2E00A287E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				977732331DB41D1A00A2D207 /* SecondaryButton.swift in Sources */,
+				9709732B1DAE8C1D00797F13 /* FirebaseManager.swift in Sources */,
+				9709732F1DB05BCB00797F13 /* FirstAIDManager.swift in Sources */,
 				971329061D8DAF2E00A287E1 /* MainViewController.swift in Sources */,
+				970973211DADE6AF00797F13 /* ContactInfoTableViewCell.swift in Sources */,
 				97787F271D9C50360048B85E /* Contact+CoreDataClass.swift in Sources */,
+				977732351DB4214A00A2D207 /* TextFieldValidation.swift in Sources */,
+				970973261DAE77F400797F13 /* FirstAIDTableViewController.swift in Sources */,
+				9709731D1DADE57900797F13 /* SingleLableTableViewCell.swift in Sources */,
 				9713290C1D8DAF2E00A287E1 /* iSafe.xcdatamodeld in Sources */,
+				970973241DADE92C00797F13 /* RegisterCells.swift in Sources */,
+				970973311DB0712400797F13 /* FirstAIDQuestionsTableViewController.swift in Sources */,
+				970973331DB07CE800797F13 /* FirstAIDAnswerViewController.swift in Sources */,
+				977732301DB4197E00A2D207 /* PrimaryButton.swift in Sources */,
 				971329381D8DB3E300A287E1 /* AddGaurdiansViewController.swift in Sources */,
+				975632671DB6A99A00309A85 /* Constants.swift in Sources */,
 				97787F281D9C50360048B85E /* Contact+CoreDataProperties.swift in Sources */,
 				9713293F1D8DBC8F00A287E1 /* NewContact.swift in Sources */,
 				971329041D8DAF2E00A287E1 /* AppDelegate.swift in Sources */,
@@ -398,8 +575,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -444,8 +623,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -464,6 +645,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -471,8 +653,10 @@
 		};
 		9713292C1D8DAF2E00A287E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322BC2640196107B0A8D6D4B /* Pods-iSafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iSafe/iSafe.entitlements;
 				DEVELOPMENT_TEAM = TC5Z7U4Q5M;
 				INFOPLIST_FILE = iSafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -484,8 +668,10 @@
 		};
 		9713292D1D8DAF2E00A287E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25F67BE386970FC455C9EF06 /* Pods-iSafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = iSafe/iSafe.entitlements;
 				DEVELOPMENT_TEAM = TC5Z7U4Q5M;
 				INFOPLIST_FILE = iSafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

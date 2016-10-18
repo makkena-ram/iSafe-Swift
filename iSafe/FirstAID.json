@@ -1,0 +1,26 @@
+{
+    "FirstAidList": [{
+                     "name": "First aid",
+                     "questions": [{
+                                   "id": "questionId1",
+                                   "question": "What should I keep in my first aid kit?",
+                                   "answer": "It's important to have a well-stocked first aid kit in your home so you can deal with minor accidents and injuries. \nYour first aid kit should be locked and kept in a cool, dry place out of the reach of children. \nMany people also keep a small first aid kit in their car for emergencies. \n\n\bYour basic first aid kit may contain: \n● Plasters in a variety of different sizes and shapes. \n● Small, medium and large sterile gauze dressings. \n● At least two sterile eye dressings. \n● Triangular bandages. \n● Crêpe rolled bandages. \n● Safety pins. \n● Disposable sterile gloves. \n● Tweezers. \n● Scissors. \n● Alcohol-free cleansing wipes. \n● Sticky tape. \n● Thermometer (preferably digital). \n● Skin rash cream, such as hydrocortisone or calendula. \n● Sream or spray to relieve insect bites and stings. \n● Antiseptic cream. \n● Painkillers such as paracetamol (or infant paracetamol for children), aspirin (not to be given to children under 16), or ibuprofen. \n● Cough medicine. \n● Antihistamine tablets. \n● Distilled water for cleaning wounds. \n● Eye wash and eye bath. \n● It may also be useful to keep a basic first aid manual or instruction booklet with your first aid kit. \n● Medicines should be checked regularly to make sure they are within their use-by dates."
+                                   }, {
+                                   "id": "questionId2",
+                                   "question": "How do I take someone's temperature?",
+                                   "answer": "You can take someone's temperature quickly and easily using a thermometer. Make sure the thermometer is clean and that you read the manufacturer's instructions first. \n\n\bChildren\nIf you're taking a child's temperature, stay with them during the reading and put the thermometer away afterwards so they don't play with it.\n\n\bChoosing a thermometer\nYou can buy a thermometer from your local pharmacy. Different types are available:\n● Digital thermometers are an accurate and easy way to take a temperature from the armpit or mouth. For children under five, take their temperature from under their armpit.\n● Ear thermometers are quick and easy to use, but expensive. The reading may not be accurate if the thermometer isn't correctly placed in the ear.\n● Strip-type thermometers are not an accurate way of taking a temperature. They show the temperature of the skin, not the body.\n● Mercury-in-glass thermometers are no longer sold and should not be used. They can break, releasing small shards of glass and highly poisonous mercury.\n\n\bWhat's a high temperature?\n● A fever (high temperature) is generally considered to be 38C (100.4F) or over."
+                                   }, {
+                                   "id": "questionId3",
+                                   "question": "What is a fever (high temperature) in children?",
+                                   "answer": "As a general rule, a temperature of over 37.5C (99.5F) is classified as a fever in children. But this can vary from child to child.Some children may be ill with a lower temperature, while others may have a higher temperature and be perfectly well. What 's most important is what's normal for your child.You know your child better than anyone if you are concerned about their temperature, they probably have a fever. Mild fevers are usually nothing to worry about, and can often be treated at home.They normally pass in a few days. if: your child is under three months old and has a temperature of 38 C(101 F) or above your child is between three and six months old and has a temperature of 39 C(102 F) or above the fever lasts more than five days your child has a fit(seizure) for the first time your child also has signs of a serious illness, such as blotchy skin or fast breathing you are worried about your child – trust your instincts if you think they could be seriously ill."
+                                   }, {
+                                   "id": "questionId4",
+                                   "question": "How do I check my pulse?",
+                                   "answer": ""
+                                   }, {
+                                   "id": "questionId5",
+                                   "question": "How do I check someone's pulse?",
+                                   "answer": ""
+                                   }]
+                     }]
+}

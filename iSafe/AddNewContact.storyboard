@@ -19,51 +19,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGV-ac-CgI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGV-ac-CgI">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWP-pt-Ct6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWP-pt-Ct6">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmailID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-PG-3lM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-PG-3lM">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq9-N6-obz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq9-N6-obz" customClass="PrimaryButton" customModule="iSafe" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.074509803920000006" green="0.64313725489999995" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="saveBtnClickedWithSender:" destination="zgH-8Y-iE3" eventType="touchUpInside" id="u4Q-hn-zQq"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MrZ-cQ-VVZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MrZ-cQ-VVZ" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zgH-8Y-iE3" id="6Gb-Mz-fcD"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-ht-WNj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-ht-WNj" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zgH-8Y-iE3" id="xF9-ws-2O8"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter EmailID" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yS7-BA-Ahb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yS7-BA-Ahb" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="zgH-8Y-iE3" id="7zw-dc-UcL"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aid-pH-kL6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aid-pH-kL6" customClass="SecondaryButton" customModule="iSafe" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="hZ9-ko-Rtu"/>
                                     <constraint firstAttribute="height" constant="45" id="ucw-w7-cCS"/>
                                 </constraints>
                                 <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="cancelBtnClickedWithSender:" destination="zgH-8Y-iE3" eventType="touchUpInside" id="mlV-3g-raR"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,24 +81,26 @@
                             <constraint firstItem="yS7-BA-Ahb" firstAttribute="centerY" secondItem="SnL-PG-3lM" secondAttribute="centerY" id="K54-ok-IeV"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="width" secondItem="aid-pH-kL6" secondAttribute="width" id="Qei-hj-BBX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MrZ-cQ-VVZ" secondAttribute="trailing" constant="10" id="Vgm-PY-yVY"/>
-                            <constraint firstItem="Iy8-ht-WNj" firstAttribute="leading" secondItem="uWP-pt-Ct6" secondAttribute="trailing" constant="100" id="YaK-Es-vbw"/>
+                            <constraint firstItem="Iy8-ht-WNj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uWP-pt-Ct6" secondAttribute="trailing" id="YaK-Es-vbw"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="centerY" secondItem="aid-pH-kL6" secondAttribute="centerY" id="Zwf-1d-m6J"/>
                             <constraint firstItem="aid-pH-kL6" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="50" id="adE-EV-crR"/>
                             <constraint firstItem="QGV-ac-CgI" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="10" id="bNs-f6-xZ7"/>
                             <constraint firstItem="uWP-pt-Ct6" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="leading" id="cDW-MX-t6w"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="height" secondItem="aid-pH-kL6" secondAttribute="height" id="cn3-kc-0o9"/>
-                            <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="trailing" constant="100" id="fYb-74-DDH"/>
+                            <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QGV-ac-CgI" secondAttribute="trailing" id="fYb-74-DDH"/>
                             <constraint firstItem="SnL-PG-3lM" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="leading" id="h4c-qG-o0Y"/>
-                            <constraint firstItem="yS7-BA-Ahb" firstAttribute="leading" secondItem="SnL-PG-3lM" secondAttribute="trailing" constant="100" id="mYR-VC-RCl"/>
+                            <constraint firstItem="yS7-BA-Ahb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SnL-PG-3lM" secondAttribute="trailing" id="mYR-VC-RCl"/>
                             <constraint firstItem="Iy8-ht-WNj" firstAttribute="centerY" secondItem="uWP-pt-Ct6" secondAttribute="centerY" id="nP9-oM-Xnb"/>
                             <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="centerY" secondItem="QGV-ac-CgI" secondAttribute="centerY" id="w7E-fP-FVU"/>
                             <constraint firstItem="uWP-pt-Ct6" firstAttribute="top" secondItem="QGV-ac-CgI" secondAttribute="bottom" constant="20" id="y54-vP-xD1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailIDTextField" destination="yS7-BA-Ahb" id="CAq-H1-K0q"/>
-                        <outlet property="nameTextField" destination="MrZ-cQ-VVZ" id="M6l-RW-cSu"/>
-                        <outlet property="phoneNumberTextField" destination="Iy8-ht-WNj" id="DGx-aV-b8P"/>
+                        <outlet property="cancelBtnClicked" destination="aid-pH-kL6" id="dqD-sR-Vvo"/>
+                        <outlet property="firstNameTF" destination="MrZ-cQ-VVZ" id="JqW-pF-yA2"/>
+                        <outlet property="lastNameTF" destination="Iy8-ht-WNj" id="TeI-fJ-Wza"/>
+                        <outlet property="phoneNumberTF" destination="yS7-BA-Ahb" id="NEb-zI-dQI"/>
+                        <outlet property="saveBtnClicked" destination="Qq9-N6-obz" id="CYr-W5-JXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="evC-qn-WsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
