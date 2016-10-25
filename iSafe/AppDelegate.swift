@@ -19,9 +19,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         //  Override point for customization after application launch.
-        
         FIRApp.configure()
         firebaseManager
+        //Defining NSUserDefaults
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        //StoryBorad and Navigation Controllers
+        self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+         let navigationController:UINavigationController = storyBoard.instantiateInitialViewController() as! UINavigationController
+        
+        if defaults.boolForKey("isFullNameSubmitted"){
+            let rootViewController = storyBoard.instantiateViewControllerWithIdentifier("MainViewController")
+            navigationController.viewControllers = [rootViewController]
+        }else{
+           
+            let rootViewController = storyBoard.instantiateViewControllerWithIdentifier("NameViewController")
+            navigationController.viewControllers = [rootViewController]
+        }
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

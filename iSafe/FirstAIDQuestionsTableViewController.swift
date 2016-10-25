@@ -11,11 +11,12 @@ import UIKit
 class FirstAIDQuestionsTableViewController: UITableViewController {
     
     var questions : Array<[String : AnyObject]>?
+    var questionName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         RegisterCells.registerTableViewCell(tableView)
-        self.navigationItem.title = "First AID Questions"
+        self.navigationItem.title = questionName! + NSLocalizedString("FirstAID.FirstAIDQuestionsPageTitle", comment: "First AID Pages")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -113,7 +114,8 @@ class FirstAIDQuestionsTableViewController: UITableViewController {
             guard let vc: FirstAIDAnswerViewController? = segue.destinationViewController as? FirstAIDAnswerViewController else{
                 return
             }
-            vc?.answer = questions![(indexPath?.row)!]["answer"] as? String
+            vc?.questionName = questions?[(indexPath?.row)!]["question"] as? String
+            vc?.answer = questions?[(indexPath?.row)!]["answer"] as? String
         }
     }
     

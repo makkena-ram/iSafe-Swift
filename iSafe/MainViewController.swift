@@ -11,27 +11,26 @@ import UIKit
 class MainViewController: UIViewController {
     
     
+    @IBOutlet weak var addGuardiansBtn: UIButton!
+    @IBOutlet weak var sOSBtn: UIButton!
+    @IBOutlet weak var firstAidBtn: UIButton!
+    @IBOutlet weak var videoRecording: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "iSafe"
+        self.navigationItem.hidesBackButton = true
+        self.navigationItem.title = NSLocalizedString("Home.HomePageTitle", comment: "Home Landing Page")
+        addGuardiansBtn.setTitle(NSLocalizedString("Home.AddGuardians", comment: "Home Landing Page"), forState: .Normal)
+        sOSBtn.setTitle(NSLocalizedString("Home.SOS", comment: "Home Landing Page"), forState: .Normal)
+        firstAidBtn.setTitle(NSLocalizedString("Home.FirstAID", comment: "Home Landing Page"), forState: .Normal)
+        videoRecording.setTitle(NSLocalizedString("Home.VideoRecording", comment: "Home Landing Page"), forState: .Normal)
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func addGaurdians(sender: UIButton) {
-    }
-
-    @IBAction func sOS(sender: UIButton) {
-    }
-    
-    @IBAction func firstAid(sender: UIButton) {
-    }
-    
-    @IBAction func videoRecording(sender: UIButton) {
-    }
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270947CD1DB8464A0028A308 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 270947CF1DB8464A0028A308 /* Localizable.strings */; };
+		270947D81DBBC9B00028A308 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270947D71DBBC9B00028A308 /* NameViewController.swift */; };
 		970973121DAD6FF000797F13 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970973111DAD6FF000797F13 /* ContactsUI.framework */; };
 		970973141DAD701400797F13 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970973131DAD701400797F13 /* Contacts.framework */; };
 		970973171DADE1BB00797F13 /* FirstAID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970973161DADE1BB00797F13 /* FirstAID.storyboard */; };
@@ -63,6 +65,13 @@
 
 /* Begin PBXFileReference section */
 		25F67BE386970FC455C9EF06 /* Pods-iSafe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSafe.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSafe/Pods-iSafe.release.xcconfig"; sourceTree = "<group>"; };
+		270947C81DB8451D0028A308 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		270947C91DB8451D0028A308 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		270947CE1DB8464A0028A308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		270947D11DB8465E0028A308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		270947D21DB846610028A308 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		270947D41DB84B7D0028A308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		270947D71DBBC9B00028A308 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		322BC2640196107B0A8D6D4B /* Pods-iSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSafe/Pods-iSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		673D7ED5E99E62EA49868D6D /* Pods_iSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9709730D1DAD6B3400797F13 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -101,7 +110,6 @@
 		9713293A1D8DB85A00A287E1 /* AddNewContact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddNewContact.storyboard; sourceTree = "<group>"; };
 		9713293C1D8DB87900A287E1 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
 		9713293E1D8DBC8F00A287E1 /* NewContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewContact.swift; sourceTree = "<group>"; };
-		972E52251DB2E6240016CF6C /* iSafe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSafe.entitlements; sourceTree = "<group>"; };
 		975632661DB6A99A00309A85 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9777322F1DB4197E00A2D207 /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		977732321DB41D1A00A2D207 /* SecondaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -138,6 +146,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270947CA1DB846140028A308 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				270947CF1DB8464A0028A308 /* Localizable.strings */,
+			);
+			name = Localizables;
+			sourceTree = "<group>";
+		};
+		270947D51DBBC84E0028A308 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				971329051D8DAF2E00A287E1 /* MainViewController.swift */,
+				971329071D8DAF2E00A287E1 /* Main.storyboard */,
+				270947D71DBBC9B00028A308 /* NameViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		270947D61DBBC8AC0028A308 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				970973231DADE92C00797F13 /* RegisterCells.swift */,
+				975632661DB6A99A00309A85 /* Constants.swift */,
+			);
+			name = Modal;
+			sourceTree = "<group>";
+		};
 		93FF81B7575BD4839C44BE9C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,17 +251,15 @@
 		971329021D8DAF2E00A287E1 /* iSafe */ = {
 			isa = PBXGroup;
 			children = (
+				971329031D8DAF2E00A287E1 /* AppDelegate.swift */,
+				270947D61DBBC8AC0028A308 /* Modal */,
+				270947D51DBBC84E0028A308 /* Home */,
+				270947CA1DB846140028A308 /* Localizables */,
 				977732311DB41C7300A2D207 /* UI */,
-				972E52251DB2E6240016CF6C /* iSafe.entitlements */,
 				970973291DAE8C1100797F13 /* Managers */,
 				9709731A1DADE53400797F13 /* Table View Cells */,
 				970973151DADE19400797F13 /* FirstAID */,
 				971329341D8DB38300A287E1 /* Add Gaurdians */,
-				971329031D8DAF2E00A287E1 /* AppDelegate.swift */,
-				971329051D8DAF2E00A287E1 /* MainViewController.swift */,
-				971329071D8DAF2E00A287E1 /* Main.storyboard */,
-				970973231DADE92C00797F13 /* RegisterCells.swift */,
-				975632661DB6A99A00309A85 /* Constants.swift */,
 				9709732C1DB05BA400797F13 /* FirstAID.json */,
 				9713290D1D8DAF2E00A287E1 /* Assets.xcassets */,
 				9713290F1D8DAF2E00A287E1 /* LaunchScreen.storyboard */,
@@ -357,14 +390,14 @@
 				TargetAttributes = {
 					971328FF1D8DAF2E00A287E1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = TC5Z7U4Q5M;
+						DevelopmentTeam = UFGJ795CXX;
 						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -387,6 +420,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 971328F71D8DAF2E00A287E1;
 			productRefGroup = 971329011D8DAF2E00A287E1 /* Products */;
@@ -407,6 +441,7 @@
 			files = (
 				970973221DADE6AF00797F13 /* ContactInfoTableViewCell.xib in Resources */,
 				971329111D8DAF2E00A287E1 /* LaunchScreen.storyboard in Resources */,
+				270947CD1DB8464A0028A308 /* Localizable.strings in Resources */,
 				970973281DAE7E4100797F13 /* GoogleService-Info.plist in Resources */,
 				9713293B1D8DB85A00A287E1 /* AddNewContact.storyboard in Resources */,
 				9709731E1DADE57900797F13 /* SingleLableTableViewCell.xib in Resources */,
@@ -489,6 +524,7 @@
 			files = (
 				977732331DB41D1A00A2D207 /* SecondaryButton.swift in Sources */,
 				9709732B1DAE8C1D00797F13 /* FirebaseManager.swift in Sources */,
+				270947D81DBBC9B00028A308 /* NameViewController.swift in Sources */,
 				9709732F1DB05BCB00797F13 /* FirstAIDManager.swift in Sources */,
 				971329061D8DAF2E00A287E1 /* MainViewController.swift in Sources */,
 				970973211DADE6AF00797F13 /* ContactInfoTableViewCell.swift in Sources */,
@@ -542,10 +578,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		270947CF1DB8464A0028A308 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				270947CE1DB8464A0028A308 /* Base */,
+				270947D11DB8465E0028A308 /* en */,
+				270947D21DB846610028A308 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		971329071D8DAF2E00A287E1 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				971329081D8DAF2E00A287E1 /* Base */,
+				270947C81DB8451D0028A308 /* es */,
+				270947D41DB84B7D0028A308 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -554,6 +602,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				971329101D8DAF2E00A287E1 /* Base */,
+				270947C91DB8451D0028A308 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -565,6 +614,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -613,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -656,8 +707,7 @@
 			baseConfigurationReference = 322BC2640196107B0A8D6D4B /* Pods-iSafe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iSafe/iSafe.entitlements;
-				DEVELOPMENT_TEAM = TC5Z7U4Q5M;
+				DEVELOPMENT_TEAM = UFGJ795CXX;
 				INFOPLIST_FILE = iSafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramakrishna.iSafe;
@@ -671,8 +721,7 @@
 			baseConfigurationReference = 25F67BE386970FC455C9EF06 /* Pods-iSafe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = iSafe/iSafe.entitlements;
-				DEVELOPMENT_TEAM = TC5Z7U4Q5M;
+				DEVELOPMENT_TEAM = UFGJ795CXX;
 				INFOPLIST_FILE = iSafe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramakrishna.iSafe;

@@ -17,7 +17,7 @@ class FirstAIDTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         RegisterCells.registerTableViewCell(tableView)
-        self.navigationItem.title = "First AID Lists"
+        self.navigationItem.title = NSLocalizedString("FirstAID.FirstAIDPageTitle", comment: "First AID Pages")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -112,7 +112,8 @@ class FirstAIDTableViewController: UITableViewController {
             guard let vc: FirstAIDQuestionsTableViewController? = segue.destinationViewController as? FirstAIDQuestionsTableViewController else{
                 return
             }
-            vc!.questions = dataArray[(indexPath?.row)!]["questions"] as? Array<[String : AnyObject]>
+            vc?.questionName = dataArray[(indexPath?.row)!]["name"] as? String
+            vc?.questions = dataArray[(indexPath?.row)!]["questions"] as? Array<[String : AnyObject]>
         }
     }
 

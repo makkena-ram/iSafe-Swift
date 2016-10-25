@@ -12,9 +12,11 @@ class FirstAIDAnswerViewController: UIViewController {
 
     @IBOutlet weak var answerTextView: UITextView!
     var answer: String?
+    var questionName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = questionName
         answerTextView.text = answer
     }
 
@@ -25,7 +27,6 @@ class FirstAIDAnswerViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         answerTextView.setContentOffset(CGPoint.zero, animated: false)
     }
     
