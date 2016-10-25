@@ -20,14 +20,14 @@ class PrimaryButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 10.0
     }
     
     func primaryBtnEnabled(){
         self.enabled = true
-        self.backgroundColor = UIColor.blueColor()
+        self.backgroundColor = UIColor.init(red: 24/255, green: 149/255, blue: 146/255, alpha: 1)
     }
     
     func primaryBtnDisabled() {

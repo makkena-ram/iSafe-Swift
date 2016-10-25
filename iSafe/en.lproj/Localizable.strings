@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  iSafe
+
+  Created by Rama Personal on 10/19/16.
+  Copyright © 2016 Rama Krishna. All rights reserved.
+*/
+
+/*Home Landing Page*/
+"Home.HomePageTitle" = "iSafe";
+"Home.AddGuardians" = "Add Guardians";
+"Home.SOS" = "SOS";
+"Home.FirstAID" = "First AID";
+"Home.VideoRecording" = "Video Recording";
+
+/*Add Guardians Page*/
+"AddGuardians.AddFromContacts" = "Add From Contacts";
+"AddGuardians.AddNewContact" = "Add New Contact";
+
+/*Add New Contact*/
+"AddNewContact.AddNewContactPageTitle" = "Add New Contact";
+"AddNewContact.FirstName" = "First Name";
+"AddNewContact.LastName" = "Last Name";
+"AddNewContact.PhoneNumber" = "Phone Number";
+"AddNewContact.SaveButtonTitle" = "Save";
+"AddNewContact.CancelButtonTitle" = "Cancel";
+
+/*First AID Page*/
+"FirstAID.FirstAIDPageTitle" = "First AID Lists";
+"FirstAID.FirstAIDQuestionsPageTitle" = " Questions";

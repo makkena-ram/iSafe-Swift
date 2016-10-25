@@ -16,20 +16,24 @@ class AddGaurdiansViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var addGaurdianstableView: UITableView!
     @IBOutlet weak var spinnerView: UIActivityIndicatorView!
     
+    @IBOutlet weak var addFromContactsBtn: PrimaryButton!
+    @IBOutlet weak var addNewContactBtn: PrimaryButton!
     var contacts: [NewContact] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addGaurdianstableView.delegate = self
         addGaurdianstableView.dataSource = self
-        navigationItem.title = "Add Gaurdians"
+        navigationItem.title = NSLocalizedString("Home.AddGuardians", comment: "Home Landing Page")
         RegisterCells.registerTableViewCell(addGaurdianstableView)
         addGaurdianstableView.tableFooterView = UIView()
+        addNewContactBtn.setTitle(NSLocalizedString("AddGuardians.AddNewContact", comment: "Add Guardians Page"), forState: .Normal)
+        addFromContactsBtn.setTitle(NSLocalizedString("AddGuardians.AddFromContacts", comment: "Add Guardians Page"), forState: .Normal)
         updateView()
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(self.updateView), name: kNotification_UpdateContacts, object: nil)
     }
@@ -85,7 +89,6 @@ class AddGaurdiansViewController: UIViewController, UITableViewDelegate, UITable
         else{
              contactCell.contactPhoneNumberLabel.text = String(format: "%@",newContact.phoneNumber!)
         }
-        
        
        // contactCell?.contactImage.image = UIImage("")
         return contactCell
@@ -97,6 +100,21 @@ class AddGaurdiansViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == .Delete
+        {
+            let contact = NewContact.contacts.removeAtIndex(indexPath.row)
+            firebaseManager.deleteUser(contact.id!)
+            tableView.reloadData()
+        }
     }
     
     @IBAction func addFromContactsBtnClicked(sender: UIButton) {
@@ -133,7 +151,6 @@ extension AddGaurdiansViewController: CNContactPickerDelegate {
             return
         }
         contactDict["phoneNumber"] = phoneNumber.stringValue
-        
         let id:String = NSUUID().UUIDString
         let newContact: NewContact = NewContact(id: id, data: contactDict)
         firebaseManager.addUsersData(newContact)

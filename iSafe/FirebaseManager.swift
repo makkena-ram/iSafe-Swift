@@ -101,4 +101,8 @@ class FirebaseManager: NSObject {
         childRef.child("phoneNumber").setValue(contact.phoneNumber!)
         
     }
+    
+    func deleteUser(id: String){
+        firebaseManager.ref.child("users").child(id).removeValue()
+    }
 }

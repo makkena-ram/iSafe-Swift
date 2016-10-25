@@ -20,7 +20,7 @@ class SecondaryButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.borderColor = UIColor.blackColor().CGColor
+        self.layer.borderColor = UIColor.lightGrayColor().CGColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 10.0
     }

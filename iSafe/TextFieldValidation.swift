@@ -11,11 +11,18 @@ import UIKit
 
 enum TextFieldType{
     case PhoneNumber
-    case Name
+    case FirstName
+    case LastName
+    case FullName
 }
 class TextFieldValidation: UITextField {
     
-    var textFieldType: TextFieldType = .Name
+    var textFieldType: TextFieldType = .FirstName {
+        didSet {
+            configureTextField()
+        }
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -31,10 +38,14 @@ class TextFieldValidation: UITextField {
     
     func configureTextField(){
         switch textFieldType {
-            case .Name:
-                self.keyboardType = .Default
+            case .FirstName:
+                keyboardType = .Default
+            case .LastName:
+                keyboardType = .Default
             case .PhoneNumber:
-                self.keyboardType = .PhonePad
+                keyboardType = .PhonePad
+            case .FullName:
+                keyboardType = .Default
         }
     }
 
@@ -42,8 +53,23 @@ class TextFieldValidation: UITextField {
 
 extension TextFieldValidation{
     func isPhoneNumberValid() -> Bool{
-        return self.text?.characters.count == 10 ? true : false
+        let phoneNumberRegEx = "^\\d{10}$"
+        let phoneStringTest = NSPredicate(format:"SELF MATCHES %@", phoneNumberRegEx)
+        return phoneStringTest.evaluateWithObject(self.text)
     }
+    
+    func isNameValid() -> Bool{
+        let nameRegEx = "[A-Za-z]{1,}"
+        let nameStringTest = NSPredicate(format: "SELF MATCHES %@", nameRegEx)
+        return nameStringTest.evaluateWithObject(self.text)
+    }
+    
+    func isFullNameValid() -> Bool{
+        let fullNameRegEx = "[A-Za-z]{1,}\\s[A-Za-z]{1,}"
+        let fullNameStringTest = NSPredicate(format: "SELF MATCHES %@", fullNameRegEx)
+        return fullNameStringTest.evaluateWithObject(self.text)
+    }
+    
     
     func formatPhoneNumber() -> String{
         guard var phoneNumber = self.text else {

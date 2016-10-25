@@ -35,26 +35,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq9-N6-obz" customClass="PrimaryButton" customModule="iSafe" customModuleProvider="target">
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.64313725489999995" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.093904647081015535" green="0.58320558071136475" blue="0.57122748803026624" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MrZ-cQ-VVZ" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MrZ-cQ-VVZ" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="zgH-8Y-iE3" id="6Gb-Mz-fcD"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-ht-WNj" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Last Name" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Iy8-ht-WNj" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="zgH-8Y-iE3" id="xF9-ws-2O8"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yS7-BA-Ahb" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone Number" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yS7-BA-Ahb" customClass="TextFieldValidation" customModule="iSafe" customModuleProvider="target">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -81,15 +81,15 @@
                             <constraint firstItem="yS7-BA-Ahb" firstAttribute="centerY" secondItem="SnL-PG-3lM" secondAttribute="centerY" id="K54-ok-IeV"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="width" secondItem="aid-pH-kL6" secondAttribute="width" id="Qei-hj-BBX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MrZ-cQ-VVZ" secondAttribute="trailing" constant="10" id="Vgm-PY-yVY"/>
-                            <constraint firstItem="Iy8-ht-WNj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uWP-pt-Ct6" secondAttribute="trailing" id="YaK-Es-vbw"/>
+                            <constraint firstItem="Iy8-ht-WNj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uWP-pt-Ct6" secondAttribute="trailing" constant="20" id="YaK-Es-vbw"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="centerY" secondItem="aid-pH-kL6" secondAttribute="centerY" id="Zwf-1d-m6J"/>
                             <constraint firstItem="aid-pH-kL6" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="50" id="adE-EV-crR"/>
                             <constraint firstItem="QGV-ac-CgI" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="10" id="bNs-f6-xZ7"/>
                             <constraint firstItem="uWP-pt-Ct6" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="leading" id="cDW-MX-t6w"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="height" secondItem="aid-pH-kL6" secondAttribute="height" id="cn3-kc-0o9"/>
-                            <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QGV-ac-CgI" secondAttribute="trailing" id="fYb-74-DDH"/>
+                            <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QGV-ac-CgI" secondAttribute="trailing" constant="20" id="fYb-74-DDH"/>
                             <constraint firstItem="SnL-PG-3lM" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="leading" id="h4c-qG-o0Y"/>
-                            <constraint firstItem="yS7-BA-Ahb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SnL-PG-3lM" secondAttribute="trailing" id="mYR-VC-RCl"/>
+                            <constraint firstItem="yS7-BA-Ahb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SnL-PG-3lM" secondAttribute="trailing" constant="20" id="mYR-VC-RCl"/>
                             <constraint firstItem="Iy8-ht-WNj" firstAttribute="centerY" secondItem="uWP-pt-Ct6" secondAttribute="centerY" id="nP9-oM-Xnb"/>
                             <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="centerY" secondItem="QGV-ac-CgI" secondAttribute="centerY" id="w7E-fP-FVU"/>
                             <constraint firstItem="uWP-pt-Ct6" firstAttribute="top" secondItem="QGV-ac-CgI" secondAttribute="bottom" constant="20" id="y54-vP-xD1"/>
@@ -97,8 +97,11 @@
                     </view>
                     <connections>
                         <outlet property="cancelBtnClicked" destination="aid-pH-kL6" id="dqD-sR-Vvo"/>
+                        <outlet property="firstNameLabel" destination="QGV-ac-CgI" id="6VN-qI-XiM"/>
                         <outlet property="firstNameTF" destination="MrZ-cQ-VVZ" id="JqW-pF-yA2"/>
+                        <outlet property="lastNameLabel" destination="uWP-pt-Ct6" id="Nxu-Qv-fbE"/>
                         <outlet property="lastNameTF" destination="Iy8-ht-WNj" id="TeI-fJ-Wza"/>
+                        <outlet property="phoneNumberLabel" destination="SnL-PG-3lM" id="OWh-fe-F7o"/>
                         <outlet property="phoneNumberTF" destination="yS7-BA-Ahb" id="NEb-zI-dQI"/>
                         <outlet property="saveBtnClicked" destination="Qq9-N6-obz" id="CYr-W5-JXZ"/>
                     </connections>
