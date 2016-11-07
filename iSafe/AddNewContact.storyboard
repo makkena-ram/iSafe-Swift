@@ -29,12 +29,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-PG-3lM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnL-PG-3lM">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq9-N6-obz" customClass="PrimaryButton" customModule="iSafe" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qq9-N6-obz" customClass="PrimaryButton" customModule="iSafe" customModuleProvider="target">
                                 <color key="backgroundColor" red="0.093904647081015535" green="0.58320558071136475" blue="0.57122748803026624" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,7 +63,6 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aid-pH-kL6" customClass="SecondaryButton" customModule="iSafe" customModuleProvider="target">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="hZ9-ko-Rtu"/>
                                     <constraint firstAttribute="height" constant="45" id="ucw-w7-cCS"/>
                                 </constraints>
                                 <state key="normal" title="Cancel"/>
@@ -72,25 +71,26 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="QGV-ac-CgI" firstAttribute="top" secondItem="ttv-IQ-KCA" secondAttribute="bottom" constant="20" id="1m5-ab-rqX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qq9-N6-obz" secondAttribute="trailing" constant="50" id="2Dh-Sg-Yfm"/>
                             <constraint firstItem="yS7-BA-Ahb" firstAttribute="trailing" secondItem="MrZ-cQ-VVZ" secondAttribute="trailing" id="9F4-G1-NZn"/>
                             <constraint firstItem="aid-pH-kL6" firstAttribute="top" secondItem="SnL-PG-3lM" secondAttribute="bottom" constant="94" id="BxA-wr-fg0"/>
                             <constraint firstItem="SnL-PG-3lM" firstAttribute="top" secondItem="uWP-pt-Ct6" secondAttribute="bottom" constant="20" id="GEe-LW-NEz"/>
                             <constraint firstItem="0em-Ul-xvs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aid-pH-kL6" secondAttribute="bottom" id="Gcg-Mz-Ehx"/>
                             <constraint firstItem="Iy8-ht-WNj" firstAttribute="trailing" secondItem="MrZ-cQ-VVZ" secondAttribute="trailing" id="JFw-1F-eH7"/>
                             <constraint firstItem="yS7-BA-Ahb" firstAttribute="centerY" secondItem="SnL-PG-3lM" secondAttribute="centerY" id="K54-ok-IeV"/>
-                            <constraint firstItem="Qq9-N6-obz" firstAttribute="width" secondItem="aid-pH-kL6" secondAttribute="width" id="Qei-hj-BBX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MrZ-cQ-VVZ" secondAttribute="trailing" constant="10" id="Vgm-PY-yVY"/>
                             <constraint firstItem="Iy8-ht-WNj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uWP-pt-Ct6" secondAttribute="trailing" constant="20" id="YaK-Es-vbw"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="centerY" secondItem="aid-pH-kL6" secondAttribute="centerY" id="Zwf-1d-m6J"/>
-                            <constraint firstItem="aid-pH-kL6" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="50" id="adE-EV-crR"/>
                             <constraint firstItem="QGV-ac-CgI" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="10" id="bNs-f6-xZ7"/>
                             <constraint firstItem="uWP-pt-Ct6" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="leading" id="cDW-MX-t6w"/>
                             <constraint firstItem="Qq9-N6-obz" firstAttribute="height" secondItem="aid-pH-kL6" secondAttribute="height" id="cn3-kc-0o9"/>
+                            <constraint firstItem="aid-pH-kL6" firstAttribute="width" secondItem="Qq9-N6-obz" secondAttribute="width" id="cyv-kh-rck"/>
+                            <constraint firstItem="aid-pH-kL6" firstAttribute="leading" secondItem="Icz-ea-TJ5" secondAttribute="leadingMargin" constant="50" id="eyz-ix-CPK"/>
                             <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QGV-ac-CgI" secondAttribute="trailing" constant="20" id="fYb-74-DDH"/>
                             <constraint firstItem="SnL-PG-3lM" firstAttribute="leading" secondItem="QGV-ac-CgI" secondAttribute="leading" id="h4c-qG-o0Y"/>
+                            <constraint firstItem="Qq9-N6-obz" firstAttribute="leading" secondItem="aid-pH-kL6" secondAttribute="trailing" constant="30" id="jgQ-TB-9l4"/>
                             <constraint firstItem="yS7-BA-Ahb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SnL-PG-3lM" secondAttribute="trailing" constant="20" id="mYR-VC-RCl"/>
                             <constraint firstItem="Iy8-ht-WNj" firstAttribute="centerY" secondItem="uWP-pt-Ct6" secondAttribute="centerY" id="nP9-oM-Xnb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qq9-N6-obz" secondAttribute="trailing" constant="50" id="w2p-in-SXb"/>
                             <constraint firstItem="MrZ-cQ-VVZ" firstAttribute="centerY" secondItem="QGV-ac-CgI" secondAttribute="centerY" id="w7E-fP-FVU"/>
                             <constraint firstItem="uWP-pt-Ct6" firstAttribute="top" secondItem="QGV-ac-CgI" secondAttribute="bottom" constant="20" id="y54-vP-xD1"/>
                         </constraints>

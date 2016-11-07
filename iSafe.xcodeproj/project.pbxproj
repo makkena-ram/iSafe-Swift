@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		270947CD1DB8464A0028A308 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 270947CF1DB8464A0028A308 /* Localizable.strings */; };
-		270947D81DBBC9B00028A308 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270947D71DBBC9B00028A308 /* NameViewController.swift */; };
+		270947D81DBBC9B00028A308 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270947D71DBBC9B00028A308 /* LoginViewController.swift */; };
+		273A730B1DC6C2E800D058CD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273A730A1DC6C2E800D058CD /* RegisterViewController.swift */; };
+		2757AC081DC0375900A177EA /* InstructionsContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2757AC071DC0375900A177EA /* InstructionsContentViewController.swift */; };
+		27D7C9D11DBF081A0032A06B /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7C9D01DBF081A0032A06B /* InstructionsViewController.swift */; };
 		970973121DAD6FF000797F13 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970973111DAD6FF000797F13 /* ContactsUI.framework */; };
 		970973141DAD701400797F13 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970973131DAD701400797F13 /* Contacts.framework */; };
 		970973171DADE1BB00797F13 /* FirstAID.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970973161DADE1BB00797F13 /* FirstAID.storyboard */; };
@@ -71,7 +74,10 @@
 		270947D11DB8465E0028A308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		270947D21DB846610028A308 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		270947D41DB84B7D0028A308 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
-		270947D71DBBC9B00028A308 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		270947D71DBBC9B00028A308 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		273A730A1DC6C2E800D058CD /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		2757AC071DC0375900A177EA /* InstructionsContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsContentViewController.swift; sourceTree = "<group>"; };
+		27D7C9D01DBF081A0032A06B /* InstructionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		322BC2640196107B0A8D6D4B /* Pods-iSafe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSafe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSafe/Pods-iSafe.debug.xcconfig"; sourceTree = "<group>"; };
 		673D7ED5E99E62EA49868D6D /* Pods_iSafe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSafe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9709730D1DAD6B3400797F13 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
@@ -159,7 +165,8 @@
 			children = (
 				971329051D8DAF2E00A287E1 /* MainViewController.swift */,
 				971329071D8DAF2E00A287E1 /* Main.storyboard */,
-				270947D71DBBC9B00028A308 /* NameViewController.swift */,
+				270947D71DBBC9B00028A308 /* LoginViewController.swift */,
+				273A730A1DC6C2E800D058CD /* RegisterViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -171,6 +178,15 @@
 				975632661DB6A99A00309A85 /* Constants.swift */,
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		27D7C9CD1DBF07070032A06B /* UI Paging */ = {
+			isa = PBXGroup;
+			children = (
+				27D7C9D01DBF081A0032A06B /* InstructionsViewController.swift */,
+				2757AC071DC0375900A177EA /* InstructionsContentViewController.swift */,
+			);
+			name = "UI Paging";
 			sourceTree = "<group>";
 		};
 		93FF81B7575BD4839C44BE9C /* Pods */ = {
@@ -251,6 +267,7 @@
 		971329021D8DAF2E00A287E1 /* iSafe */ = {
 			isa = PBXGroup;
 			children = (
+				27D7C9CD1DBF07070032A06B /* UI Paging */,
 				971329031D8DAF2E00A287E1 /* AppDelegate.swift */,
 				270947D61DBBC8AC0028A308 /* Modal */,
 				270947D51DBBC84E0028A308 /* Home */,
@@ -524,7 +541,8 @@
 			files = (
 				977732331DB41D1A00A2D207 /* SecondaryButton.swift in Sources */,
 				9709732B1DAE8C1D00797F13 /* FirebaseManager.swift in Sources */,
-				270947D81DBBC9B00028A308 /* NameViewController.swift in Sources */,
+				270947D81DBBC9B00028A308 /* LoginViewController.swift in Sources */,
+				273A730B1DC6C2E800D058CD /* RegisterViewController.swift in Sources */,
 				9709732F1DB05BCB00797F13 /* FirstAIDManager.swift in Sources */,
 				971329061D8DAF2E00A287E1 /* MainViewController.swift in Sources */,
 				970973211DADE6AF00797F13 /* ContactInfoTableViewCell.swift in Sources */,
@@ -533,6 +551,7 @@
 				970973261DAE77F400797F13 /* FirstAIDTableViewController.swift in Sources */,
 				9709731D1DADE57900797F13 /* SingleLableTableViewCell.swift in Sources */,
 				9713290C1D8DAF2E00A287E1 /* iSafe.xcdatamodeld in Sources */,
+				2757AC081DC0375900A177EA /* InstructionsContentViewController.swift in Sources */,
 				970973241DADE92C00797F13 /* RegisterCells.swift in Sources */,
 				970973311DB0712400797F13 /* FirstAIDQuestionsTableViewController.swift in Sources */,
 				970973331DB07CE800797F13 /* FirstAIDAnswerViewController.swift in Sources */,
@@ -542,6 +561,7 @@
 				97787F281D9C50360048B85E /* Contact+CoreDataProperties.swift in Sources */,
 				9713293F1D8DBC8F00A287E1 /* NewContact.swift in Sources */,
 				971329041D8DAF2E00A287E1 /* AppDelegate.swift in Sources */,
+				27D7C9D11DBF081A0032A06B /* InstructionsViewController.swift in Sources */,
 				9713293D1D8DB87900A287E1 /* AddNewContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -713,6 +733,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramakrishna.iSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -727,6 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ramakrishna.iSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

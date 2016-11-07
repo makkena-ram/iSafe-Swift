@@ -11,6 +11,11 @@ import CoreData
 import Contacts
 import Firebase
 
+enum ShortcutKeys: String {
+    case ADD_GAURDIANS = "AddGuardians"
+    case SOS = "SOS"
+    case FIRST_AID = "FirstAid"
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,10 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         //  Override point for customization after application launch.
         FIRApp.configure()
-        firebaseManager
+        
+        //SettingUIPaging Control Colors
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.redColor()
+        
         //Defining NSUserDefaults
         let defaults = NSUserDefaults.standardUserDefaults()
-        
         //StoryBorad and Navigation Controllers
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -32,14 +41,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if defaults.boolForKey("isFullNameSubmitted"){
             let rootViewController = storyBoard.instantiateViewControllerWithIdentifier("MainViewController")
             navigationController.viewControllers = [rootViewController]
-        }else{
-           
+            self.window?.rootViewController = navigationController
+        }else if !defaults.boolForKey("isInstructionsVCDisplayed"){
+            let instructionsVC = storyBoard.instantiateViewControllerWithIdentifier("InstructionsViewController")
+            navigationController.viewControllers = [instructionsVC]
+            self.window?.rootViewController = navigationController
+        }
+        else{
             let rootViewController = storyBoard.instantiateViewControllerWithIdentifier("NameViewController")
             navigationController.viewControllers = [rootViewController]
+            self.window?.rootViewController = navigationController
         }
-        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
-        return true
+        
+        var isQuickActionHandled = false
+        if let shortcitItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem{
+            isQuickActionHandled = true
+            handleQuickAction(shortcitItem)
+        }
+        return !isQuickActionHandled
+    }
+    
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        //Handle Quick Actions
+        completionHandler(handleQuickAction(shortcutItem))
+    }
+    
+    private func handleQuickAction(shortcutItem: UIApplicationShortcutItem) -> Bool{
+        var isQuickActionHandled = false
+        let type = shortcutItem.type.componentsSeparatedByString(".").last
+        
+        var storyBoard: UIStoryboard?
+        let navigationController:UINavigationController = window?.rootViewController as! UINavigationController
+        
+        if let shortcutType = ShortcutKeys.init(rawValue: type!){
+            switch shortcutType{
+            case .ADD_GAURDIANS:
+                storyBoard = UIStoryboard(name: "AddGaurdians", bundle: nil)
+                let addGaurdiansVC = storyBoard?.instantiateInitialViewController() as? AddGaurdiansViewController
+                for vc in navigationController.viewControllers{
+                    if vc.isKindOfClass(MainViewController){
+                        navigationController.pushViewController(addGaurdiansVC!, animated: false)
+                    }
+                }
+                
+                isQuickActionHandled = true
+            case .SOS:
+                isQuickActionHandled = true
+            case .FIRST_AID:
+                storyBoard = UIStoryboard(name: "FirstAID", bundle: nil)
+                let firstVC = storyBoard?.instantiateInitialViewController() as? FirstAIDTableViewController
+                for vc in navigationController.viewControllers{
+                    if vc.isKindOfClass(MainViewController){
+                        navigationController.pushViewController(firstVC!, animated: false)
+                    }
+                }
+                isQuickActionHandled = true
+            }
+        }
+        return isQuickActionHandled
     }
 
     func applicationWillResignActive(application: UIApplication) {

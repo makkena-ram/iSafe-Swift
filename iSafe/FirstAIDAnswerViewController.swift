@@ -9,25 +9,20 @@
 import UIKit
 
 class FirstAIDAnswerViewController: UIViewController {
-
-    @IBOutlet weak var answerTextView: UITextView!
+    
+    @IBOutlet weak var answerWebView: UIWebView!
     var answer: String?
     var questionName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = questionName
-        answerTextView.text = answer
+        answerWebView.loadHTMLString(answer!, baseURL: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        answerTextView.setContentOffset(CGPoint.zero, animated: false)
     }
     
     /*

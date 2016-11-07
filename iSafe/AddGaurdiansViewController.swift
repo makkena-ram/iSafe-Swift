@@ -29,7 +29,9 @@ class AddGaurdiansViewController: UIViewController, UITableViewDelegate, UITable
         addGaurdianstableView.tableFooterView = UIView()
         addNewContactBtn.setTitle(NSLocalizedString("AddGuardians.AddNewContact", comment: "Add Guardians Page"), forState: .Normal)
         addFromContactsBtn.setTitle(NSLocalizedString("AddGuardians.AddFromContacts", comment: "Add Guardians Page"), forState: .Normal)
-        updateView()
+        spinnerView.startAnimating()
+        firebaseManager.getContacts()
+        spinnerView.stopAnimating()
     }
     
     override func viewWillAppear(animated: Bool) {

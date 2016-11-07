@@ -18,6 +18,7 @@ class FirstAIDTableViewController: UITableViewController {
         super.viewDidLoad()
         RegisterCells.registerTableViewCell(tableView)
         self.navigationItem.title = NSLocalizedString("FirstAID.FirstAIDPageTitle", comment: "First AID Pages")
+        self.tableView.tableFooterView = UIView()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
